@@ -52,5 +52,10 @@ python rag-app01.py
 - **Question Answering**: Provides responses using OpenAI's GPT model.
 - **Interactive Interface**: Built with Gradio for user-friendly interaction.
 
-## License
-This project is licensed under the MIT License.
+## **License**
+
+This project is licensed under the [MIT License](LICENSE).
+
+## **Contributing**
+
+Contributions are welcome! Please fork the repository and submit a pull request.
