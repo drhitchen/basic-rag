@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.dylib
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+
+# Local RAG data folder
+data/
+
+# Local ChromaDB vector store folder
+chroma_db
+
+# PyInstaller
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Environment and secrets
+.env
+*.env
+
+# Local caches, logs, and databases
+chroma_db/
+*.log
+
+# If using coverage reports
+htmlcov/
+.coverage*
+.cache
+pytest_cache/
