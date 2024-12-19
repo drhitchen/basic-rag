@@ -11,7 +11,7 @@ This project implements a basic Retrieval-Augmented Generation (RAG) workflow us
 
 ### 1. Clone the Repository
 ```bash
-git clone [<repository-url>](https://github.com/drhitchen/basic-rag.git)
+git clone https://github.com/drhitchen/basic-rag.git
 cd basic-rag
 ```
 
