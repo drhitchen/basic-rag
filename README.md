@@ -29,7 +29,7 @@ venv\Scripts\activate
 
 ### 3. Install Dependencies
 ```bash
-pip install -r requirements-rag.txt
+pip install -r requirements.txt
 ```
 
 ### 4. Configure Environment Variables
