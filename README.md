@@ -11,8 +11,8 @@ This project implements a basic Retrieval-Augmented Generation (RAG) workflow us
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone [<repository-url>](https://github.com/drhitchen/basic-rag.git)
+cd basic-rag
 ```
 
 ### 2. Create and Activate a Virtual Environment
@@ -45,6 +45,12 @@ Place your documents (e.g., PDFs) in the designated `data/` folder. These will b
 Execute the script to start the Gradio interface:
 ```bash
 python rag-app01.py
+```
+
+### 7. Open and interact with UI in web browser
+Browse to http://127.0.0.1:1337:
+```bash
+open http://127.0.0.1:1337
 ```
 
 ## Features
