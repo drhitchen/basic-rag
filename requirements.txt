@@ -1,5 +1,8 @@
-python-dotenv
-openai
+chromadb
+gradio
 langchain
 langchain-community
-gradio
+langchain-openai
+openai
+pypdf
+python-dotenv
