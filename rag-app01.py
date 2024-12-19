@@ -10,6 +10,7 @@ from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 import gradio as gr
 import getpass
+import sys
 
 # Function to get API key
 def get_openai_api_key():
@@ -41,9 +42,18 @@ DEBUG_MODE = os.getenv("DEBUG", "false").lower() == "true"
 # Get the API key
 openai.api_key = get_openai_api_key()
 
-# Step 1: Load and Process Documents
 def load_documents(directory="./data"):
+    # Check if directory exists
+    if not os.path.isdir(directory):
+        print(f"Error: The directory '{directory}' does not exist.")
+        sys.exit(1)
+
     pdf_files = glob.glob(os.path.join(directory, "*.pdf"))
+    # Check if at least one PDF is found
+    if len(pdf_files) == 0:
+        print(f"Error: No PDF files found in '{directory}'. Please add PDFs and try again.")
+        sys.exit(1)
+
     documents = []
     for pdf_file in pdf_files:
         loader = PyPDFLoader(pdf_file)
@@ -65,7 +75,6 @@ vectorstore_dir = "./chroma_db"
 if os.path.exists(vectorstore_dir):
     shutil.rmtree(vectorstore_dir)
 
-# Use the model param with OpenAIEmbeddings from langchain_openai
 embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 db = Chroma.from_documents(docs, embeddings, collection_name="my_pdfs", persist_directory=vectorstore_dir)
 
@@ -83,7 +92,7 @@ qa = RetrievalQA.from_chain_type(
 def chat_with_pdfs(query):
     if not query.strip():
         return "Please enter a question."
-    response = qa.invoke(query)  # This returns a dict with keys "query" and "result"
+    response = qa.invoke(query)  # returns dict with keys "query" and "result"
     answer = response["result"]  # Extract the textual result
     return answer
 

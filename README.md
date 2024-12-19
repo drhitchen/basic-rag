@@ -18,7 +18,7 @@ cd basic-rag
 ### 2. Create and Activate a Virtual Environment
 #### Linux/macOS:
 ```bash
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate
 ```
 #### Windows:
