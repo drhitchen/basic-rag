@@ -38,7 +38,7 @@ OPENAI_API_KEY=your-api-key
 ```
 
 ### 5. Add Local Documents
-Place your documents (e.g., PDFs) in the designated `data/` folder. To test with the sample UnlockTheKetoCodeShoppingList.pdf from Dr. Gundry, copy it to the `data/` folder. Here are some example prompts to try with this file.
+Place your documents (e.g., PDFs) in the designated `data/` folder. Or, to test with the sample keto shopping list from Dr. Gundry, copy `UnlockTheKetoCodeShoppingList.pdf` to the `data/` folder. Here are some example prompts to try with this file.
 
 #### Sample Prompts:
 
