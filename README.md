@@ -1,7 +1,7 @@
 # RAG Workflow Project
 
 ## Description
-This project implements a basic Retrieval-Augmented Generation (RAG) workflow using LangChain and OpenAI's GPT models. It leverages a local document store and Gradio for user interaction.
+This project implements a basic Retrieval-Augmented Generation (RAG) workflow using LangChain and OpenAI's GPT models. It leverages a local ChromaDB document store and Gradio for user interaction.
 
 ## Requirements
 - Python 3.8 or newer
