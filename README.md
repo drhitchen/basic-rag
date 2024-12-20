@@ -48,8 +48,6 @@ Place your documents (e.g., PDFs) in the designated `data/` folder. To test with
 - **Create a numbered list of ALL items on Dr. Gundry's "No" list. Give me the full list which should contain nearly 100 items.**
 - **Create a numbered list of ALL items on Dr. Gundry's "Yes" list. Give me the full list which should contain over 100 items.**
 
-Specialized assistant mode:
-
 - **You are a specialized assistant. Retrieve and respond only using the uploaded document content. Do not speculate or rely on general knowledge. Cite the document for all responses. Create a numbered list of ALL items on Dr. Gundry's "No" list. Give me the full list which should contain nearly 100 items.**
 - **You are a specialized assistant. Retrieve and respond only using the uploaded document content. Do not speculate or rely on general knowledge. Cite the document for all responses. Create a numbered list of ALL items on Dr. Gundry's "Yes" list. Give me the full list which should contain over 100 items.**
 
