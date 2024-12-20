@@ -1,4 +1,3 @@
-
 # RAG Workflow Project
 
 ## Description
@@ -39,7 +38,22 @@ OPENAI_API_KEY=your-api-key
 ```
 
 ### 5. Add Local Documents
-Place your documents (e.g., PDFs) in the designated `data/` folder. These will be indexed and used by the RAG workflow.
+Place your documents (e.g., PDFs) in the designated `data/` folder. To include the sample PDF from Dr. Gundry, copy it to the `data/` folder as well. Here are some example prompts you can try:
+
+#### Sample Prompts:
+
+- **Create a numbered list of ALL items on Dr. Gundry's "No" list.**
+- **Create a numbered list of ALL items on Dr. Gundry's "Yes" list.**
+
+Advanced prompts:
+
+- **Create a numbered list of ALL items on Dr. Gundry's "No" list. Give me the full list which should contain nearly 100 items.**
+- **Create a numbered list of ALL items on Dr. Gundry's "Yes" list. Give me the full list which should contain over 100 items.**
+
+Specialized assistant mode:
+
+- **You are a specialized assistant. Retrieve and respond only using the uploaded document content. Do not speculate or rely on general knowledge. Cite the document for all responses. Create a numbered list of ALL items on Dr. Gundry's "No" list. Give me the full list which should contain nearly 100 items.**
+- **You are a specialized assistant. Retrieve and respond only using the uploaded document content. Do not speculate or rely on general knowledge. Cite the document for all responses. Create a numbered list of ALL items on Dr. Gundry's "Yes" list. Give me the full list which should contain over 100 items.**
 
 ### 6. Run the Application
 Execute the script to start the Gradio interface:
