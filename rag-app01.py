@@ -101,7 +101,7 @@ with gr.Blocks() as demo:
     gr.Markdown("# Chat with your local PDFs")
     gr.Markdown("Type a question and hit 'Submit' to query your documents.")
 
-    query = gr.Textbox(lines=2, placeholder="Ask something about your internal policies...")
+    query = gr.Textbox(lines=2, placeholder="Ask something about your uploaded documents...")
     submit = gr.Button("Submit")
     output = gr.Textbox(label="Answer")
 
