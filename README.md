@@ -38,14 +38,12 @@ OPENAI_API_KEY=your-api-key
 ```
 
 ### 5. Add Local Documents
-Place your documents (e.g., PDFs) in the designated `data/` folder. To include the sample PDF from Dr. Gundry, copy it to the `data/` folder as well. Here are some example prompts you can try:
+Place your documents (e.g., PDFs) in the designated `data/` folder. To test with the sample UnlockTheKetoCodeShoppingList.pdf from Dr. Gundry, copy it to the `data/` folder. Here are some example prompts to try with this file.
 
 #### Sample Prompts:
 
 - **Create a numbered list of ALL items on Dr. Gundry's "No" list.**
 - **Create a numbered list of ALL items on Dr. Gundry's "Yes" list.**
-
-Advanced prompts:
 
 - **Create a numbered list of ALL items on Dr. Gundry's "No" list. Give me the full list which should contain nearly 100 items.**
 - **Create a numbered list of ALL items on Dr. Gundry's "Yes" list. Give me the full list which should contain over 100 items.**
