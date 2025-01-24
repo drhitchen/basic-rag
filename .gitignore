@@ -40,6 +40,10 @@ chroma_db
 chroma_db/
 *.log
 
+# Local work in progress
+tmp/
+wip/
+
 # If using coverage reports
 htmlcov/
 .coverage*

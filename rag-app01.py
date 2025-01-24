@@ -9,38 +9,15 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 import gradio as gr
-import getpass
 import sys
 
-# Function to get API key
-def get_openai_api_key():
-    # 1. Check environment variable
-    api_key = os.getenv("OPENAI_API_KEY")
-    if api_key:
-        return api_key
+# Load environment variables from .env file
+load_dotenv()
 
-    # 2. Check .env file in the current working directory
-    load_dotenv(os.path.expanduser("./.env"))
-    api_key = os.getenv("OPENAI_API_KEY")
-    if api_key:
-        return api_key
-
-    # 3. Check .env file in ~/.config/fabric/
-    load_dotenv(os.path.expanduser("~/.config/fabric/.env"))
-    api_key = os.getenv("OPENAI_API_KEY")
-    if api_key:
-        return api_key
-
-    # 4. Prompt the user to enter the API key
-    print("API key not found in the specified locations.")
-    api_key = getpass.getpass("Please enter your OpenAI API key (* input masked): ")
-    return api_key
-
-# Debug mode toggle
-DEBUG_MODE = os.getenv("DEBUG", "false").lower() == "true"
-
-# Get the API key
-openai.api_key = get_openai_api_key()
+# Get the API key from the environment
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("API key not found. Please set OPENAI_API_KEY in the .env file.")
 
 def load_documents(directory="./data"):
     # Check if directory exists
