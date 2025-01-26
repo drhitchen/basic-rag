@@ -1,22 +1,17 @@
-from openai import OpenAI
-from dotenv import load_dotenv
 import os
+import openai
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai.embeddings import OpenAIEmbeddings  # Updated import
 from chromadb import Client
 from chromadb.config import Settings
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
-
-# Get the API key from the environment
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("API key not found. Please set OPENAI_API_KEY in the .env file.")
-
-# Instantiate the OpenAI client
-client = OpenAI(api_key=api_key)
 
 # Assistant configuration
 assistant_config = {
@@ -76,7 +71,7 @@ def query_system(query):
 
     # Combine relevant chunks and pass to OpenAI's GPT
     context = "\n".join(relevant_chunks)
-    response = client.chat.completions.create(
+    response = openai.chat.completions.create(
         model=assistant_config["model"],
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},

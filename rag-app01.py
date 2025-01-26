@@ -11,10 +11,8 @@ from langchain.chains import RetrievalQA
 import gradio as gr
 import sys
 
-# Load environment variables from .env file
+# Load environment variables and set api_key
 load_dotenv()
-
-# Get the API key from the environment
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("API key not found. Please set OPENAI_API_KEY in the .env file.")

@@ -1,5 +1,5 @@
 import gradio as gr
-from openai import OpenAI
+import openai
 from dotenv import load_dotenv
 import os
 from PyPDF2 import PdfReader
@@ -14,8 +14,6 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("API key not found. Please set OPENAI_API_KEY in the .env file.")
-
-client = OpenAI(api_key=api_key)
 
 assistant_config = {
     "model": "gpt-4o",
@@ -82,7 +80,7 @@ def query_system(query):
     context = "\n".join(relevant_chunks)
     
     # Call the OpenAI chat completion
-    response = client.chat.completions.create(
+    response = openai.chat.completions.create(
         model=assistant_config["model"],
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
